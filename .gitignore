@@ -1,0 +1,31 @@
+# OS-specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-*
+
+# Claude Code specific
+.claude/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local skills (not for publishing)
+design-principles/
+
+# Generated files
+README.md
