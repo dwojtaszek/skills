@@ -1,6 +1,6 @@
 ---
 name: verification-partner
-description: Get second opinions from different AI models (OpenAI via Cursor, Google via Copilot). Use when user asks to verify, review, get a second opinion, cross-check, validate, or brainstorm alternatives for code, architecture, or technical decisions. Triggers on keywords like "verify", "second opinion", "cross-check", "independent review".
+description: "Get second opinions from different AI models (OpenAI via Cursor, Google via Copilot). Use for cross-validating code, architecture, and technical decisions. Triggered by: get a second opinion, verify this code, review this for me, cross-check my approach, is this a good design, validate this architecture, brainstorm alternatives, what do other models think, independent review, check this implementation, sanity check, double-check this, does this look right, another perspective on this."
 ---
 
 # Verification Partner
@@ -24,21 +24,27 @@ Code is sent to external AI providers (Cursor → OpenAI, Copilot → Google). D
 
 ## Quick Start
 
-```bash
-# Review unstaged changes
-~/.claude/skills/verification-partner/scripts/verify.py --mode code-review --git-diff
+**Run from skill directory:** `cd ~/.claude/skills/verification-partner`
 
-# Review staged changes
-~/.claude/skills/verification-partner/scripts/verify.py --mode code-review --git-staged
+### code-review --git-diff ⭐ **Most Common**
+```bash
+./scripts/verify.py --mode code-review --git-diff
+```
+Reviews unstaged changes - use this for quick feedback before staging.
+
+### Other Commands
+```bash
+# Review staged changes (before commit)
+./scripts/verify.py --mode code-review --git-staged
 
 # Review branch vs main
-~/.claude/skills/verification-partner/scripts/verify.py --mode code-review --git-branch main
+./scripts/verify.py --mode code-review --git-branch main
 
 # Review specific files
-~/.claude/skills/verification-partner/scripts/verify.py --mode code-review --files src/auth.ts src/middleware.ts
+./scripts/verify.py --mode code-review --files src/auth.ts src/middleware.ts
 
 # Manual content
-~/.claude/skills/verification-partner/scripts/verify.py --mode code-review \
+./scripts/verify.py --mode code-review \
   --context "Express.js auth middleware" --content "$(cat auth.ts)"
 ```
 
@@ -103,7 +109,7 @@ When manually preparing content, format as:
 \`\`\`
 ```
 
-Pipe large content via stdin: `echo "[content]" | verify.py --mode code-review --context "..."`
+Pipe large content via stdin: `echo "[content]" | ./scripts/verify.py --mode code-review --context "..."`
 
 ## Troubleshooting
 
