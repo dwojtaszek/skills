@@ -24,8 +24,14 @@ Desktop.ini
 *.tmp
 *.temp
 
-# Local skills (not for publishing)
+# Ignore specific directories (not for publishing)
 design-principles/
+jira/
+salesforce/
+
+# Python cache
+__pycache__/
+*.pyc
 
 # Generated files
 README.md
