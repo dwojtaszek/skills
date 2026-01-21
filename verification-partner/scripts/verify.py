@@ -24,8 +24,8 @@ from typing import List, Tuple, Optional
 
 MODEL_CONFIG = {
     'cursor': {
-        'default': 'gpt-5.2-codex-xhigh',
-        'available': ['gpt-5.2-codex-xhigh', 'gemini-3-pro'],
+        'default': 'gpt-5.2-codex-xhigh-fast',
+        'available': ['gpt-5.2-codex-xhigh-fast', 'gpt-5.2-codex-xhigh', 'gemini-3-pro'],
     },
     'copilot': {
         'default': 'gemini-3-pro-preview',

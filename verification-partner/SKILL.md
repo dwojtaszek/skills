@@ -65,7 +65,7 @@ Reviews unstaged changes - use this for quick feedback before staging.
 --context        Background context (auto-generated for git options)
 --content        Content to verify (or use git/file options)
 --tool           cursor|copilot|both (default: both)
---model          Specify model (cursor: gpt-5.2-codex-xhigh, gemini-3-pro; copilot: gpt-5.1-codex-max, gemini-3-pro-preview)
+--model          Specify model (cursor: gpt-5.2-codex-xhigh-fast*, gpt-5.2-codex-xhigh, gemini-3-pro; copilot: gemini-3-pro-preview*, gpt-5.1-codex-max) *=default
 --json           JSON output
 --check-status   Check tool availability
 
